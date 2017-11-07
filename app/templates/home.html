@@ -1,7 +1,14 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-3 room-menu">
-      <h1>Bloc Chat</h1>
+      <div class="row">
+        <div class="col-xs-6">
+          <h1>Bloc Chat</h1>
+        </div>
+        <div class="col-xs-6">
+          <a class="btn btn-lg btn-default" ng-click="home.openCreateRoomModal()">New room</a>
+        </div>
+      </div>
       <div class="room-list" ng-repeat="room in home.rooms">
         <p class="text-left">{{ room.$value }}</p>
       </div>

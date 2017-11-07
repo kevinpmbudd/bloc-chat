@@ -1,0 +1,26 @@
+<div class="new-room-modal">
+  <div class="new-room-modal-header">
+    <h3 class="new-room-modal-title" id="new-room-modal-title">Create new room</h3>
+  </div>
+  <div class="new-room-modal-body" id="new-room-modal-body">
+    <form name="createRoomForm">
+      <label for="new-room-input">Enter a room name</label>
+      <input id="new-room-input" ng-model="roomName" name="roomName" type="text" required/>
+    </form>
+  </div>
+  <div class="new-room-modal-footer">
+    <div class="row">
+      <div class="col-xs-6 modal-btn-container">
+        <a class="btn btn-default cancel-btn"
+           type="button"
+           ng-click="createRoom.cancel()">Cancel</a>
+      </div>
+      <div class="col-xs-6 modal-btn-container">
+        <a class="btn btn-default create-btn"
+           type="button"
+           ng-click="createRoom.add(roomName)"
+           ng-disabled="createRoomForm.$invalid">Create room</a>
+      </div>
+    </div>
+  </div>
+</div>
