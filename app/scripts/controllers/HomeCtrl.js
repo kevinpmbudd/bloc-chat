@@ -6,7 +6,9 @@
       let modalInstance = $uibModal.open({
         templateUrl: 'templates/create_room_modal.html',
         controller: 'CreateRoomModalCtrl as createRoom',
-        size: 'sm'
+        size: 'sm',
+        backdrop  : 'static',
+        keyboard  : false
       });
     }
 
@@ -18,5 +20,5 @@
 
   angular
     .module('blocChat')
-    .controller('HomeCtrl', ['$scope','$uibModal', 'Room', 'Message', HomeCtrl]);
+    .controller('HomeCtrl', ['$scope', '$uibModal', 'Room', 'Message', HomeCtrl]);
 })();

@@ -1,0 +1,21 @@
+<div class="set-username-modal">
+  <div class="set-username-modal-header">
+    <h3 class="set-username-modal-title" id="set-username-modal-title">Set a username</h3>
+  </div>
+  <div class="set-username-modal-body" id="set-username-modal-body">
+    <form name="setUsernameForm">
+      <label for="set-username-input">This name will appear when you send messages</label>
+      <input id="set-username-input" ng-model="userName" name="userName" type="text" required/>
+    </form>
+  </div>
+  <div class="set-username-modal-footer">
+    <div class="row">
+      <div class="modal-btn-container">
+        <a class="btn btn-default set-username-btn"
+           type="button"
+           ng-click="setUsername.setUsername(userName)"
+           ng-disabled="setUsernameForm.$invalid">Set username
+        </a>
+    </div>
+  </div>
+</div>

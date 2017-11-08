@@ -61,6 +61,41 @@ body, html {
 .modal-btn-container {
   padding: 0 !important;
 }
+
+/* set username modal */
+.modal-content {
+  background-color: #f0f0f0 !important;
+}
+.set-username-modal {
+  margin: 30px 20px 30px 20px;
+}
+.set-username-modal-header {
+  margin: 20px 0 20px 0;
+}
+.set-username-modal-body label {
+  margin: 5px 0 5px 0;
+  color: #aeadad;
+  font-weight: normal;
+}
+.set-username-modal-body input {
+  display: block;
+  width: 100%;
+  margin: 10px 0 10px 0;
+}
+.set-username-modal-footer {
+  margin: 0 15px;
+}
+.set-username-modal-footer a {
+  width: 100%;
+}
+.set-username-modal-footer .set-username-btn {
+  background-color: #c9c9c9;
+  color: #ffffff;
+}
+.modal-btn-container {
+  padding: 0 !important;
+}
+
 /* messages */
 .messages-room-header {
   margin: 10px 15px;
