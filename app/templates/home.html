@@ -1,19 +1,39 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="col-md-3 room-menu">
+    <div class="col-xs-3 room-menu">
       <div class="row">
-        <div class="col-xs-6">
+        <div class="col-xs-12 col-lg-7">
           <h1>Bloc Chat</h1>
         </div>
-        <div class="col-xs-6">
-          <a class="btn btn-lg btn-default" ng-click="home.openCreateRoomModal()">New room</a>
+        <div class="col-xs-12 col-lg-5">
+          <a class="btn btn-lg btn-default" ng-click="home.openNewRoomModal()">New room</a>
         </div>
       </div>
       <div class="room-list" ng-repeat="room in home.rooms">
-        <p class="text-left">{{ room.$value }}</p>
+        <p ng-click="home.setActiveRoom(room)" class="text-left">{{ room.$value }}</p>
       </div>
     </div>
-    <div class="col-md-9">
+    <div class="col-xs-9">
+      <div class="row">
+        <h2 class="messages-room-header">{{ activeRoom.$value }}</h2>
+      </div>
+      <div class="row">
+        <table class="messages-list">
+          <tr class="messages-item" ng-repeat="message in messages">
+            <td class="messages-name-and-message">
+              <div class="row">
+                <p><strong>{{ message.username }}</strong></p>
+              </div>
+              <div class="row">
+                <p>{{ message.content }}</p>
+              </div>
+            </td>
+            <td class="messages-time text-right">
+              <p>{{ message.sentAt }}</p>
+            </td>
+          </tr>
+        </table>
+      </div>
     </div>
   </div>
 </div>
