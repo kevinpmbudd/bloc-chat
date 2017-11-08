@@ -7,10 +7,9 @@
     Room.all = rooms;
 
     Room.add = function(room) {
-      console.log(room);
       rooms.$add(room).then(function(ref) {
         let id = ref.key;
-        console.log("added record with id " + id);
+        console.log("added room with id " + id);
       });
     }
 

@@ -35,6 +35,19 @@
           </tr>
         </table>
       </div>
+      <div class="row">
+        <div class="add-message">
+          <form name="messageSubmitForm" ng-show="activeRoom">
+            <input ng-model="content" placeholder="Write your message here..." required>
+            <a ng-click="home.message.send(content, activeRoom.$id); content = ''"
+               class="btn btn-default"
+               ng-show="content"
+               ng-disabled="messageSubmitForm.$invalid">
+               <p>Send</p>
+            </a>
+          </form>
+        </div>
+      </div>
     </div>
   </div>
 </div>

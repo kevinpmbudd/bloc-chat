@@ -118,3 +118,24 @@ tr:nth-child(odd) {
 .messages-time p {
   margin: 10px 20px;
 }
+
+/* Add Message Input */
+.add-message input {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  height: 70px;
+  margin: 0px;
+}
+.add-message a {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  height: 70px;
+  margin: 0px;
+  background-color: #4a4a4a;
+  color: #f0f0f0;
+}
+.add-message p {
+  margin: 15px 0;
+}
