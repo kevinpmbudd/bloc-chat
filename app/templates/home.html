@@ -39,7 +39,7 @@
         <div class="add-message">
           <form name="messageSubmitForm" ng-show="activeRoom">
             <input ng-model="content" placeholder="Write your message here..." required>
-            <a ng-click="home.message.send(content, activeRoom.$id); content = ''"
+            <a ng-click="home.sendMessage()"
                class="btn btn-default"
                ng-show="content"
                ng-disabled="messageSubmitForm.$invalid">
